@@ -1,18 +1,22 @@
 const playerNameAdd = [];
 
-function display(card){
+function display(players){
     const playerName = document.getElementById('player-name');
     playerName.innerHTML = '';
-    for(let i = 0; i < card.length; i++){
-        const playerNameList = playerNameAdd[i].playerNameList;
-        const tr = document.createElement('tr')
+    for(let i = 0; i < players.length; i++){
+        if (i < 5) {
+            const playerNameList = playerNameAdd[i].playerNameList;
+            const tr = document.createElement('tr')
         
-        tr.innerHTML = `
-        <th>${i + 1}</th>
-        <td>${playerNameList}</td>
-        `
-        playerName.appendChild(tr);
-        
+            tr.innerHTML = `
+            <th>${i + 1}</th>
+            <td>${playerNameList}</td>
+            `;
+            playerName.appendChild(tr);
+        }
+        else{
+            return alert('Please do not over then 5 player name');
+        }
     }
 }
 

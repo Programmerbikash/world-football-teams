@@ -1,10 +1,3 @@
-function inputValue(value){
-    const inputAmount = document.getElementById(value);
-    const previousInputAmount = inputAmount.value;
-    const inputAmountNext = parseInt(previousInputAmount);
-    return inputAmountNext;
-}
-
 document.getElementById('per-player-field').addEventListener('click', function(){
     const playerInputAmount = inputValue('player-input');
     
