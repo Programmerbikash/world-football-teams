@@ -48,11 +48,8 @@ function addToName(element){
     }
 
     playerNameAdd.push(object1);
-    
 
     display(playerNameAdd);
+    
 }
 
-addToList (element){
-    element.disabled = true ;
-    }
