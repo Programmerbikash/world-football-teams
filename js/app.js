@@ -13,11 +13,32 @@ function display(players){
             <td>${playerNameList}</td>
             `;
             playerName.appendChild(tr);
+            
         }
         else{
             return alert('Please do not over then 5 player name');
         }
     }
+    
+
+    const playerInputAmount = inputValue('player-input');
+    const playerExpensesField = document.getElementById('player-expenses-field');
+    const playerExpenses = playerExpensesField.innerText;
+    playerExpensesField.innerText = playerInputAmount * playerNameAdd.length;
+    const previousTotalPlayerAmount = playerExpensesField.innerText;
+    const totalPlayerAmount = parseInt(previousTotalPlayerAmount);
+    
+    const managerAmount = inputValue('manager-amount');
+    
+    const coachAmount = inputValue('coach-amount');
+
+    const totalAmount = totalPlayerAmount + managerAmount + coachAmount;
+
+
+    const totalAmountButton = document.getElementById('total-amount');
+    const previousTotalAmountButton = totalAmountButton.innerText;
+    return totalAmountButton.innerText = totalAmount;
+
 }
 
 function addToName(element){
@@ -27,7 +48,11 @@ function addToName(element){
     }
 
     playerNameAdd.push(object1);
-    console.log(playerNameAdd.length);
+    
 
     display(playerNameAdd);
 }
+
+addToList (element){
+    element.disabled = true ;
+    }
